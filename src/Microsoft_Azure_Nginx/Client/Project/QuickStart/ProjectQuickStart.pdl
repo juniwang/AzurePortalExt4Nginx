@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl"
+            xmlns:azurefx="http://schemas.microsoft.com/aux/2013/pdl/azurefx"
+            Area="Project">
+  <Part Name="ProjectQuickStartPart" PartKind="QuickStart" ViewModel="{ViewModel Name=ProjectQuickStartPartViewModel, Module=Project/QuickStart/ViewModels/ProjectQuickStartPartViewModel}">
+    <BladeAction Blade="ProjectQuickStartBlade" />
+  </Part>
+  <azurefx:QuickStartBlade Name="ProjectQuickStartBlade"
+                           ViewModel="{ViewModel Name=ProjectQuickStartBladeViewModel, Module=Project/QuickStart/ViewModels/ProjectQuickStartBladeViewModel}"
+                           PartViewModel="{ViewModel Name=ProjectQuickStartInfoListViewModel, Module=Project/QuickStart/ViewModels/ProjectQuickStartInfoListViewModel}"/>
+</Definition>

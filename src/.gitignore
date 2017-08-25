@@ -1,0 +1,11 @@
+Microsoft_Azure_Mindaro/**/*.js
+Microsoft_Azure_Mindaro/**/*.js.map
+Microsoft_Azure_Mindaro/bin
+Microsoft_Azure_Mindaro/obj
+Microsoft_Azure_Mindaro/Client/_generated
+Microsoft_Azure_Mindaro/App_Data/*
+Microsoft_Azure_Mindaro/GalleryPackages/Cloud
+Microsoft_Azure_Mindaro/Client/ClientResources.d.ts
+Microsoft_Azure_Mindaro/Client/Microsoft_Azure_Mindaro.pde
+Microsoft_Azure_Mindaro/Client/ProjectStrings.d.ts
+Microsoft_Azure_Mindaro/web.config

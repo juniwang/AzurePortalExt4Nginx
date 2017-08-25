@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl"
+            xmlns:azurefx="http://schemas.microsoft.com/aux/2013/pdl/azurefx"
+            Area="Project">
+
+  <AssetType Name="Project"
+              ViewModel="{ViewModel Name=ProjectAssetTypeViewModel, Module=Project/Browse/ViewModels/ProjectAssetTypeViewModel}"
+              PartName="ProjectPart"
+              BladeName="ProjectBlade"
+              UseResourceMenu="True"
+              UseStaticResourceMenuOverview="True"
+              PluralDisplayName="{Resource AssetTypeNames.Project.plural, Module=ProjectStrings}"
+              SingularDisplayName="{Resource AssetTypeNames.Project.singular, Module=ProjectStrings}"
+              LowerPluralDisplayName="{Resource AssetTypeNames.Project.lowerPlural, Module=ProjectStrings}"
+              LowerSingularDisplayName="{Resource AssetTypeNames.Project.lowerSingular, Module=ProjectStrings}"
+              Icon="{Resource Content.SVG.project, Module=_generated/Svg}">
+    <Browse Type="ResourceType" Private="true" />
+    <ResourceType ResourceTypeName="Microsoft.Nginx/Nginx" ApiVersion="2014-04-01-preview" />
+    <!-- TODO: Permissions from RBAC? -->
+  </AssetType>
+
+  <!--
+    This part represents an overview of a Project resource, and is available to be used
+    on the startboard, or inside of a blade.  You refer to this part in the AssetType
+    declaration above, so it can be used by notifications and browse.
+  -->
+  <Part Name="ProjectPart"
+        ViewModel="{ViewModel Name=ProjectPartViewModel, Module=Project/Browse/ViewModels/ProjectPartViewModel}"
+        PartKind="Asset"
+        AssetType="Project"
+        AssetIdProperty="id">
+    <Part.Properties>
+      <Property Name="id"
+                Source="{DataInput Property=id}" />
+    </Part.Properties>
+
+    <BladeAction Blade="ProjectBlade">
+      <BladeInput Parameter="id" Source="assetId" />
+    </BladeAction>
+
+  </Part>
+</Definition>

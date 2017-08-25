@@ -1,0 +1,56 @@
+{
+  $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  contentVersion: "1.0.0.0",
+  parameters: {
+    projectName: {
+      type: "string"
+    },
+    location: {
+      type: "string"
+    }
+  },
+  variables: {
+    aiName: "[concat('AI-', uniqueString(parameters('projectName'), resourceGroup().id))]",
+    storageAccountName: "[concat('acrstorage', uniqueString(parameters('projectName'), resourceGroup().id))]"
+  },
+  resources: [
+    {
+      type: "microsoft.insights/components",
+      name: "[variables('aiName')]",
+      apiVersion: "2015-05-01",
+      location: "eastus",
+      tags: {
+        displayName: "[concat('Application Insights for ', parameters('projectName'))]",
+        project: "[parameters('projectName')]"
+      },
+      properties: {
+        Application_Type: "other",
+        Flow_Type: "Bluefield",
+        Request_Source: "rest"
+      }
+    },
+    {
+        "type": "Microsoft.Nginx/Nginx",
+        "name": "[parameters('projectName')]",
+        "apiVersion": "2014-04-01-preview",
+        "location": "[parameters('location')]",
+        "dependsOn": [
+            "[resourceId('microsoft.insights/components', variables('aiName'))]"
+        ],
+        "properties": {
+            "containerRegistryId": "",
+            "containerRegistryUrl": "",
+            "containerRegistryLocation": "",
+            "containerRegistryUsername": "",
+            "containerRegistryPassword": "",
+            "aiAppId": "[reference(resourceId('Microsoft.Insights/components', variables('aiName')), '2015-05-01').AppId]",
+            "aiResourceId": "[resourceId('Microsoft.Insights/components', variables('aiName'))]",
+            "aiInstrumentationKey": "[reference(resourceId('Microsoft.Insights/components', variables('aiName')), '2015-05-01').InstrumentationKey]"
+        },
+        "sku": {
+            "name": "Basic",
+            "tier": "Basic"
+        }
+    }
+  ]
+}

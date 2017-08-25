@@ -1,0 +1,67 @@
+﻿{
+  "$schema": "https://gallery.azure.com/schemas/2014-09-01/manifest.json#",
+  "name": "ProjectGalleryPackage",
+  "publisher": "Microsoft",
+  "version": "1.0.1-preview",
+  "displayName": "ms-resource:displayName",
+  "publisherDisplayName": "ms-resource:publisherDisplayName",
+  "publisherLegalName": "ms-resource:publisherDisplayName",
+  "summary": "ms-resource:summary",
+  "description": "ms-resource:description",
+  "longSummary": "ms-resource:longSummary",
+  "longDescription": "ms-resource:description",
+  "properties": [],
+  "artifacts": [
+    {
+      "name": "ProjectTemplate",
+      "type": "Template",
+      "path": "DeploymentTemplates\\ProjectTemplate.json",
+      "isDefault": true
+    },
+  ],
+  "links": [
+    {
+      "id": "0",
+      "displayName": "ms-resource:linkDocumentation",
+      "uri": "http://azure.microsoft.com/en-us/documentation/services/cloud-services/"
+    },
+    {
+      "id": "1",
+      "displayName": "ms-resource:linkServiceOverview",
+      "uri": "http://azure.microsoft.com/en-us/services/cloud-services/"
+    },
+    {
+      "id": "2",
+      "displayName": "ms-resource:linkSolutions",
+      "uri": "http://azure.microsoft.com/en-us/solutions/web/"
+    },
+    {
+      "id": "3",
+      "displayName": "ms-resource:linkPricing",
+      "uri": "http://azure.microsoft.com/en-us/pricing/details/cloud-services/"
+    }
+  ],
+  "icons": {
+    "Small": "Icons\\Small.png",
+    "Medium": "Icons\\Medium.png",
+    "Large": "Icons\\Large.png",
+    "Wide": "Icons\\Wide.png"
+  },
+  "products": [],
+  "screenshots": [ "Screenshots\\Image01.png" ],
+  "categories": [
+    "devService",
+    "devServiceRecommended",
+    "azureCertified"
+  ],
+  "uiDefinition": {
+    "path": "UIDefinition.json"
+  },
+  "filters": [
+    // type: Country, Subscription, Resources, HideKey, OfferType, OfferCategory
+    {
+      "type": "HideKey",
+      "value": "ProjectHidden"
+    }
+  ]
+}

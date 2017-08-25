@@ -1,0 +1,18 @@
+{
+    "$schema": "https://gallery.azure.com/schemas/2015-02-12/UIDefinition.json#",
+    "createDefinition": {
+      "createBlade": {
+        "name": "CreateBlade",
+        "extension": "Microsoft_Azure_Nginx"
+      },
+        "startboardPart": {
+            "name": "ProjectPart",
+            "extension": "Microsoft_Azure_Nginx"
+        },
+        "startboardPartKeyId": "id"
+    },
+    "initialData": {
+    },
+    "options": {
+    }
+}

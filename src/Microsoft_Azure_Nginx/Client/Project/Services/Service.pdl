@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl"
+            xmlns:azurefx="http://schemas.microsoft.com/aux/2013/pdl/azurefx"
+            Area="Project">
+
+  <AssetType Name="Service"
+              ViewModel="{ViewModel Name=ServiceAssetTypeViewModel, Module=Project/Services/ViewModels/ServiceAssetTypeViewModel}"
+              BladeName="ServiceBlade"
+              PartName="ServicePart"
+              PluralDisplayName="{Resource AssetTypeNames.Service.plural, Module=ProjectStrings}"
+              SingularDisplayName="{Resource AssetTypeNames.Service.singular, Module=ProjectStrings}"
+              LowerPluralDisplayName="{Resource AssetTypeNames.Service.lowerPlural, Module=ProjectStrings}"
+              LowerSingularDisplayName="{Resource AssetTypeNames.Service.lowerSingular, Module=ProjectStrings}"
+              Icon="{Resource Content.SVG.service, Module=_generated/Svg}">
+    <!-- TODO: Permissions from RBAC? -->
+  </AssetType>
+
+  <!--
+    This part represents an overview of a Service, and is available to be used
+    on the startboard, or inside of a blade.  You refer to this part in the AssetType
+    declaration above, so it can be used by notifications and browse.
+  -->
+  <Part Name="ServicePart"
+        ViewModel="{ViewModel Name=ServicePartViewModel, Module=Project/Services/ViewModels/ServicePartViewModel}"
+        PartKind="Asset"
+        AssetType="Service"
+        AssetIdProperty="id">
+    <Part.Properties>
+      <Property Name="id"
+                Source="{DataInput Property=id}" />
+    </Part.Properties>
+
+    <BladeAction Blade="ServiceBlade">
+      <BladeInput Parameter="id" Source="assetId" />
+    </BladeAction>
+
+  </Part>
+
+</Definition>

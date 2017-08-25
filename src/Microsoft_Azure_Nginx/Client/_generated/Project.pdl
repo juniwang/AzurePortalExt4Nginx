@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl" Area="Project">
+    <_Internal_AreaTypeScriptMetadata AreaName='Project' ModulePath='D:\workspace\github\juniwang\AzurePortalExt4Nginx\src\Microsoft_Azure_Nginx\Client\Project\ProjectArea.ts' />
+    <_Internal_BladeTypeScriptDependencies>
+        <_Internal_BladeTypeScriptDependencies.DefinitionFileNames>
+        </_Internal_BladeTypeScriptDependencies.DefinitionFileNames>
+        <_Internal_BladeTypeScriptDependencies.Modules>
+        </_Internal_BladeTypeScriptDependencies.Modules>
+    </_Internal_BladeTypeScriptDependencies>
+    <_Internal_PartTypeScriptDependencies>
+        <_Internal_PartTypeScriptDependencies.DefinitionFileNames>
+        </_Internal_PartTypeScriptDependencies.DefinitionFileNames>
+        <_Internal_PartTypeScriptDependencies.Modules>
+        </_Internal_PartTypeScriptDependencies.Modules>
+    </_Internal_PartTypeScriptDependencies>
+    <TemplateBlade
+            Name="ServiceBlade"
+            ViewModel="{ViewModel Name=ServiceBladeAdapter, Module=../_generated/adapters/blade/ServiceBladeAdapter}"
+            Style="BasicWithCommands"
+            InitialDisplayState="Maximized"
+            AssetType="Service"
+            AssetIdProperty="id"
+            PartSize="FitToContainer"
+            Pinnable="True"
+            _Internal_HasOnPinMethod="True"
+        >
+        <TemplateBlade.Parameters>
+            <Parameter Name="id" Type="Key" />
+        </TemplateBlade.Parameters>
+        <TemplateBlade.Settings>
+            <Setting Property="essentialsExpanded" />
+        </TemplateBlade.Settings>
+        <TemplateBlade.Template>
+            <Html><![CDATA[<div data-bind='pcControl: essentials'></div>]]></Html>
+        </TemplateBlade.Template>
+        <_Internal_BladeTypeScriptMetadata>
+            <_Internal_BladeTypeScriptMetadata.ParametersTypeExpression>
+                <TypeScriptTypeExpression><![CDATA[IdInput]]></TypeScriptTypeExpression>
+            </_Internal_BladeTypeScriptMetadata.ParametersTypeExpression>
+        </_Internal_BladeTypeScriptMetadata>
+        <CommandBar />
+    </TemplateBlade>
+    <TemplateBlade
+            Name="ProjectBlade"
+            ViewModel="{ViewModel Name=ProjectBladeAdapter, Module=../_generated/adapters/blade/ProjectBladeAdapter}"
+            Style="BasicWithCommands"
+            InitialDisplayState="Maximized"
+            AssetType="Project"
+            AssetIdProperty="id"
+            PartSize="FitToContainer"
+            Pinnable="True"
+            _Internal_HasOnPinMethod="True"
+        >
+        <TemplateBlade.Parameters>
+            <Parameter Name="id" Type="Key" />
+        </TemplateBlade.Parameters>
+        <TemplateBlade.Settings>
+            <Setting Property="essentialsExpanded" />
+            <SharedSetting Property="timespan" Key="Azure_Project_Service_Timespan" />
+            <Setting Property="servicesSortColumn" />
+            <Setting Property="servicesSortAscending" />
+        </TemplateBlade.Settings>
+        <TemplateBlade.Template>
+            <Html><![CDATA[<div data-bind="pcControl: essentials"></div>
+                   <div style="margin: 25px">
+                       <div class="msportalfx-text-header" data-bind="text: serviceListSectionTitle"></div>
+                       <div data-bind="pcControl: gridVM"></div>
+                   </div>]]></Html>
+        </TemplateBlade.Template>
+        <_Internal_BladeTypeScriptMetadata>
+            <_Internal_BladeTypeScriptMetadata.ParametersTypeExpression>
+                <TypeScriptTypeExpression><![CDATA[IdInput]]></TypeScriptTypeExpression>
+            </_Internal_BladeTypeScriptMetadata.ParametersTypeExpression>
+        </_Internal_BladeTypeScriptMetadata>
+        <CommandBar />
+    </TemplateBlade>
+</Definition>

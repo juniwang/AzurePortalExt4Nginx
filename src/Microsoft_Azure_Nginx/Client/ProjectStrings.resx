@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AssetPropertyNames_Project_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="AssetTypeNames_Project_lowerPlural" xml:space="preserve">
+    <value>nginx</value>
+  </data>
+  <data name="AssetTypeNames_Project_lowerSingular" xml:space="preserve">
+    <value>nginx</value>
+  </data>
+  <data name="AssetTypeNames_Project_plural" xml:space="preserve">
+    <value>Nginx</value>
+  </data>
+  <data name="AssetTypeNames_Project_singular" xml:space="preserve">
+    <value>Nginx</value>
+  </data>
+  <data name="ProjectBladeSubtitle" xml:space="preserve">
+    <value>Nginx subtitle</value>
+  </data>
+  <data name="ProjectLocationColumn" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Resource Name</value>
+  </data>
+  <data name="ProjectNameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ProjectNameRequired" xml:space="preserve">
+    <value>The name is required</value>
+  </data>
+  <data name="SelectLocation" xml:space="preserve">
+    <value>Select a location</value>
+  </data>
+  <data name="SelectResourceGroup" xml:space="preserve">
+    <value>Select a resource group</value>
+  </data>
+  <data name="SelectSubscription" xml:space="preserve">
+    <value>Select a subscription</value>
+  </data>
+  <data name="AssetPropertyNames_Project_ResourceGroup" xml:space="preserve">
+    <value>Resource group</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Subscription" xml:space="preserve">
+    <value>Subscription</value>
+  </data>
+  <data name="SubscriptionId" xml:space="preserve">
+    <value>SubscriptionId</value>
+  </data>
+  <data name="EnterTheName" xml:space="preserve">
+    <value>Enter the name</value>
+  </data>
+  <data name="htmlSiteMSDNAddress" xml:space="preserve">
+    <value>http://msdn.microsoft.com</value>
+  </data>
+  <data name="LinkPropertyLabel" xml:space="preserve">
+    <value>Link Property Label</value>
+  </data>
+  <data name="LoadingText" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="MicrosoftUri" xml:space="preserve">
+    <value>www.microsoft.com</value>
+  </data>
+  <data name="PropertiesBladeTitle" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="QuickStartBladeSubtitle" xml:space="preserve">
+    <value>Quick Start Blade Subtitle</value>
+  </data>
+  <data name="QuickStartBladeTitle" xml:space="preserve">
+    <value>Quick Start Blade Title</value>
+  </data>
+  <data name="QuickStartDescription" xml:space="preserve">
+    <value>Quick Start Description</value>
+  </data>
+  <data name="QuickStartInfoListDesc1" xml:space="preserve">
+    <value>This section has an Icon and will open a new browser tab on click. These two factors are mutually exclusive as the first depends on if an iconUri is set and the second because section.selectable was populated. This description text is multiline.</value>
+  </data>
+  <data name="QuickStartInfoListDesc2" xml:space="preserve">
+    <value>PDL provides openBlades and links[] of the InfoListBladeLinkContract type will be opened in blades. The tile supports both blade links and hyperlinks in the same section. Numbers are used when iconUri is not set.</value>
+  </data>
+  <data name="QuickStartInfoListTitle1" xml:space="preserve">
+    <value>Icon &amp; Selectable</value>
+  </data>
+  <data name="QuickStartInfoListTitle2" xml:space="preserve">
+    <value>Section that opens blade</value>
+  </data>
+  <data name="QuickStartShortTitle" xml:space="preserve">
+    <value>Quick Start</value>
+  </data>
+  <data name="QuickStartTitle" xml:space="preserve">
+    <value>Quick Start</value>
+  </data>
+  <data name="TextPropertyLabel" xml:space="preserve">
+    <value>Text Property Label</value>
+  </data>
+  <data name="Command_Delete_Title" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="MenuItemKeyword_Location" xml:space="preserve">
+    <value>location</value>
+  </data>
+  <data name="MenuItemKeyword_ResourceGroup" xml:space="preserve">
+    <value>resource group</value>
+  </data>
+  <data name="MenuItemKeyword_Subscription" xml:space="preserve">
+    <value>subscription</value>
+  </data>
+  <data name="MenuItem_Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="MenuItem_Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="ProjectNameAlphaNumeric" xml:space="preserve">
+    <value>Project name must contain only alphanumeric characters</value>
+  </data>
+  <data name="ProjectNameNotAvailable" xml:space="preserve">
+    <value>A project with this name already exists</value>
+  </data>
+  <data name="Project_Delete_Failure_Message" xml:space="preserve">
+    <value>Unable to delete Project '{0}'. Please try again later.</value>
+  </data>
+  <data name="Project_Delete_Success_Message" xml:space="preserve">
+    <value>Successfully deleted Project '{0}'.</value>
+  </data>
+  <data name="Command_Delete_Prompt" xml:space="preserve">
+    <value>Deleting the project is irreversible, would you like to continue?</value>
+  </data>
+  <data name="Operations_Delete_FailureDescription" xml:space="preserve">
+    <value>Delete of project '{name}' failed with status: '{status}' and error: '{error}'</value>
+  </data>
+  <data name="Operations_Delete_FailureTitle" xml:space="preserve">
+    <value>Delete failed</value>
+  </data>
+  <data name="Operations_Delete_InProgressDescription" xml:space="preserve">
+    <value>Deleting project '{name}'</value>
+  </data>
+  <data name="Operations_Delete_InProgressTitle" xml:space="preserve">
+    <value>Delete in progress</value>
+  </data>
+  <data name="Operations_Delete_StartedDescription" xml:space="preserve">
+    <value>Submitting delete request for project '{name}'</value>
+  </data>
+  <data name="Operations_Delete_StartTitle" xml:space="preserve">
+    <value>Submitting delete request</value>
+  </data>
+  <data name="Operations_Delete_SuccessDescription" xml:space="preserve">
+    <value>Successfully deleted project '{name}'</value>
+  </data>
+  <data name="Operations_Delete_SuccessTitle" xml:space="preserve">
+    <value>Delete successful</value>
+  </data>
+  <data name="MenuItemKeyword_Resources" xml:space="preserve">
+    <value>resources</value>
+  </data>
+  <data name="MenuItemKeyword_Status" xml:space="preserve">
+    <value>status</value>
+  </data>
+  <data name="SectionHeader_Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="AssetTypeNames_Service_lowerPlural" xml:space="preserve">
+    <value>upstream servers</value>
+  </data>
+  <data name="AssetTypeNames_Service_lowerSingular" xml:space="preserve">
+    <value>upstream server</value>
+  </data>
+  <data name="AssetTypeNames_Service_plural" xml:space="preserve">
+    <value>Upstream Servers</value>
+  </data>
+  <data name="AssetTypeNames_Service_singular" xml:space="preserve">
+    <value>Upstream Server</value>
+  </data>
+  <data name="ColumnTitle_Host" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="ColumnTitle_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ColumnTitle_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="ColumnTitle_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="ColumnTitle_Updated" xml:space="preserve">
+    <value>Updated</value>
+  </data>
+  <data name="detailsCommandTextResourceKey" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Label_Internal" xml:space="preserve">
+    <value>Internal</value>
+  </data>
+  <data name="NoServicesInProject" xml:space="preserve">
+    <value>This Nginx instance contains no upstream servers.</value>
+  </data>
+  <data name="ReferenceStatus_Bound" xml:space="preserve">
+    <value>Bound</value>
+  </data>
+  <data name="ServicesListGridSummary" xml:space="preserve">
+    <value>List of Services and their high level properties</value>
+  </data>
+  <data name="ColumnTitle_Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+</root>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 14.00
+# Visual Studio 2015
+VisualStudioVersion = 14.0.25431.01
+MinimumVisualStudioVersion = 14.0.0.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft_Azure_Mindaro", "Microsoft_Azure_Nginx\Microsoft_Azure_Nginx.csproj", "{6C088569-F0CE-4367-B087-EE77D4A4252A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C088569-F0CE-4367-B087-EE77D4A4252A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C088569-F0CE-4367-B087-EE77D4A4252A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C088569-F0CE-4367-B087-EE77D4A4252A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C088569-F0CE-4367-B087-EE77D4A4252A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA91E5AC-6347-4BF2-87D2-B92915A663CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA91E5AC-6347-4BF2-87D2-B92915A663CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA91E5AC-6347-4BF2-87D2-B92915A663CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA91E5AC-6347-4BF2-87D2-B92915A663CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
