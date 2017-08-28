@@ -110,5 +110,6 @@ declare module "ProjectStrings" {
             bound: string;
         };
         servicesListGridSummary: string;
+        settingsBladeTitle: string;
     };
 }

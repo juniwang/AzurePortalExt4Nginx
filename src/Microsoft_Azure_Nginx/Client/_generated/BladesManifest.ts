@@ -27,6 +27,9 @@ module ExtensionDefinition {
       "width": 2
     },
     {
+      "name": "SettingsBlade"
+    },
+    {
       "name": "PropertiesBlade",
       "width": 0
     },

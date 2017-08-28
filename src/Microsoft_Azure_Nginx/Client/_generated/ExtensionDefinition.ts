@@ -216,6 +216,7 @@ module ExtensionDefinition {
     }
     export module BladeNames {
         export var deploymentsBlade: string = "DeploymentsBlade";
+        export var settingsBlade: string = "SettingsBlade";
         export var propertiesBlade: string = "PropertiesBlade";
         export var projectQuickStartBlade: string = "ProjectQuickStartBlade";
         export var createBlade: string = "CreateBlade";
@@ -258,6 +259,17 @@ module ExtensionDefinition {
                 export interface SettingsContract {
                 }
                 export interface Contract extends MsPortalFx.ViewModels.PartContent,MsPortalFx.ViewModels.QuickStartPart {
+                }
+            }
+            export module SettingsBladeViewModel {
+                export interface InputsContract {
+                    id: any;
+                }
+                export interface SettingsContract {
+                }
+                export interface Contract extends MsPortalFx.ViewModels.BladeContract {
+                    onInputsSet(inputs: InputsContract, settings: SettingsContract): MsPortalFx.Base.Promise;
+                    commandBar: MsPortalFx.ViewModels.Toolbars.ToolbarContract;
                 }
             }
             export module PropertiesBladeViewModel {
@@ -382,6 +394,8 @@ module ExtensionDefinition {
     }
     export interface Deployments$DeploymentInfoPart$Contract extends ViewModels.Deployments.DeploymentInfoPart.Contract {
     }
+    export interface Project$SettingsBladeViewModel$Contract extends ViewModels.Project.SettingsBladeViewModel.Contract {
+    }
     export interface Project$PropertiesBladeViewModel$Contract extends ViewModels.Project.PropertiesBladeViewModel.Contract {
     }
     export interface Project$PropertiesPartViewModel$Contract extends ViewModels.Project.PropertiesPartViewModel.Contract {
@@ -406,6 +420,7 @@ module ExtensionDefinition {
         ProjectPartViewModel(container: MsPortalFx.ViewModels.PartContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<Project$ProjectPartViewModel$Contract>;
         ServicePartViewModel(container: MsPortalFx.ViewModels.PartContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<Project$ServicePartViewModel$Contract>;
         ProjectQuickStartPartViewModel(container: MsPortalFx.ViewModels.PartContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<Project$ProjectQuickStartPartViewModel$Contract>;
+        SettingsBladeViewModel(container: FxCompositionPdlBlade.Container, initialState?: any): MsPortalFx.Base.PromiseV<Project$SettingsBladeViewModel$Contract>;
         PropertiesBladeViewModel(container: MsPortalFx.ViewModels.ContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<Project$PropertiesBladeViewModel$Contract>;
         PropertiesPartViewModel(container: MsPortalFx.ViewModels.PartContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<Project$PropertiesPartViewModel$Contract>;
         ProjectQuickStartBladeViewModel(container: MsPortalFx.ViewModels.ContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<Project$ProjectQuickStartBladeViewModel$Contract>;

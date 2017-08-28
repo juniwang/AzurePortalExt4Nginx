@@ -28,6 +28,15 @@ module BladeDefinitions {
                     });
         }
     }
+    export interface SettingsBladeInputs {
+        id: any;
+    }
+    export class SettingsBladeReference extends FxSelectable2.PdlBladeReference<SettingsBladeInputs, void> {
+        public constructor(parameters: SettingsBladeInputs, onClosed?: FxComposition.BladeClosedWithDataHandler<any>) {
+            super("SettingsBlade", extensionName, createOptions<SettingsBladeInputs, void>(onClosed, parameters), {
+                    });
+        }
+    }
     export interface PropertiesBladeInputs {
         id: any;
     }

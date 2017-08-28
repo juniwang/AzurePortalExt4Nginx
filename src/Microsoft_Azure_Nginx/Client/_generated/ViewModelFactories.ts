@@ -17,6 +17,7 @@ import Projectquickstartinfolistviewmodel = require ("Project/QuickStart/ViewMod
 import Projectquickstartbladeviewmodel = require ("Project/QuickStart/ViewModels/ProjectQuickStartBladeViewModel");
 import Propertiespartviewmodel = require ("../Project/Properties/ViewModels/PropertiesPartViewModel");
 import Propertiesbladeviewmodel = require ("../Project/Properties/ViewModels/PropertiesBladeViewModel");
+import Settingsbladeviewmodel = require ("../Project/Settings/ViewModels/SettingsBladeViewModel");
 import Deploymentinfopart = require ("../Deployments/ViewModels/DeploymentInfoPart");
 import Projectquickstartpartviewmodel = require ("Project/QuickStart/ViewModels/ProjectQuickStartPartViewModel");
 import Servicepartviewmodel = require ("Project/Services/ViewModels/ServicePartViewModel");
@@ -43,6 +44,12 @@ module ViewModelFactories {
             return this.loadViewModelAsync<typeof Projectquickstartpartviewmodel, ExtensionDefinition.Project$ProjectQuickStartPartViewModel$Contract>(
             "Project/QuickStart/ViewModels/ProjectQuickStartPartViewModel",
             (providerModule) => new providerModule.ProjectQuickStartPartViewModel(container, initialState, this.dataContext),
+            require);
+        }
+        public SettingsBladeViewModel(container: FxCompositionPdlBlade.Container, initialState?: any): MsPortalFx.Base.PromiseV<ExtensionDefinition.Project$SettingsBladeViewModel$Contract> {
+            return this.loadViewModelAsync<typeof Settingsbladeviewmodel, ExtensionDefinition.Project$SettingsBladeViewModel$Contract>(
+            "../Project/Settings/ViewModels/SettingsBladeViewModel",
+            (providerModule) => new providerModule.SettingsBladeViewModel(container, initialState, this.dataContext),
             require);
         }
         public PropertiesBladeViewModel(container: MsPortalFx.ViewModels.ContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<ExtensionDefinition.Project$PropertiesBladeViewModel$Contract> {
@@ -147,6 +154,9 @@ module ViewModelFactories {
         }
         public Deployments$DeploymentInfoPart(container: FxCompositionPdlBlade.Container, initialState?: any): MsPortalFx.Base.PromiseV<ExtensionDefinition.Deployments$DeploymentInfoPart$Contract> {
             return getDeployments(this).DeploymentInfoPart(container, initialState);
+        }
+        public Project$SettingsBladeViewModel(container: FxCompositionPdlBlade.Container, initialState?: any): MsPortalFx.Base.PromiseV<ExtensionDefinition.Project$SettingsBladeViewModel$Contract> {
+            return getProject(this).SettingsBladeViewModel(container, initialState);
         }
         public Project$PropertiesBladeViewModel(container: MsPortalFx.ViewModels.ContainerContract, initialState?: any): MsPortalFx.Base.PromiseV<ExtensionDefinition.Project$PropertiesBladeViewModel$Contract> {
             return getProject(this).PropertiesBladeViewModel(container, initialState);

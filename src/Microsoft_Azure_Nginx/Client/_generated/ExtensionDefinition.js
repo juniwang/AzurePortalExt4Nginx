@@ -164,6 +164,7 @@ define(["require", "exports"], function (require, exports) {
         var BladeNames;
         (function (BladeNames) {
             BladeNames.deploymentsBlade = "DeploymentsBlade";
+            BladeNames.settingsBlade = "SettingsBlade";
             BladeNames.propertiesBlade = "PropertiesBlade";
             BladeNames.projectQuickStartBlade = "ProjectQuickStartBlade";
             BladeNames.createBlade = "CreateBlade";

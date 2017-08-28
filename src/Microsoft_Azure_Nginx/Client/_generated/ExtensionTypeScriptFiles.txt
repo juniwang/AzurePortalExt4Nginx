@@ -11,6 +11,7 @@ Client\Project\ProjectRestOperations.ts
 Client\Project\Services\ViewModels\ServiceAssetTypeViewModel.ts
 Client\Project\Services\ViewModels\ServicePartViewModel.ts
 Client\Project\Services\ViewModels\ServiceBlade.ts
+Client\Project\Settings\ViewModels\SettingsBladeViewModel.ts
 Client\Shared\PortalHelpers.ts
 Client\Shared\PCV3Form.ts
 Client\ProjectCreate\DataModels\CreateProject.d.ts

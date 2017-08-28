@@ -36,10 +36,10 @@ define(["require", "exports", "_generated/BladeReferences", "_generated/Svg", "P
             };
             var extensionsItem = {
                 id: "extensions",
-                displayText: "Extensions",
+                displayText: "Settings",
                 keywords: [Strings.MenuItemKeyword.subscription, Strings.MenuItemKeyword.resourceGroup, Strings.MenuItemKeyword.location],
-                icon: MsPortalFx.Base.Images.Polychromatic.Controls(),
-                supplyBladeReference: function () { return new BladeRefs.PropertiesBladeReference({ id: resourceInfo.resourceId }); },
+                icon: MsPortalFx.Base.Images.Polychromatic.Extensions(),
+                supplyBladeReference: function () { return new BladeRefs.SettingsBladeReference({ id: resourceInfo.resourceId }); },
             };
             var menuConfig = {
                 overview: overviewItem,

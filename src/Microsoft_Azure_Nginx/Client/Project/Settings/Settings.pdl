@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl"
+            xmlns:azurefx="http://schemas.microsoft.com/aux/2013/pdl/azurefx"
+             Area="Project" >
+    <TemplateBlade Name="SettingsBlade"
+                   ViewModel="{ViewModel Name=SettingsBladeViewModel, Module=./Settings/ViewModels/SettingsBladeViewModel}"
+                   InitialDisplayState="Maximized"
+                   Template="{ Html Source='Templates\\SettingsTemplateBlade.html' }">
+        <TemplateBlade.Parameters>
+            <Parameter Name="id"/>
+        </TemplateBlade.Parameters>
+        <CommandBar />
+    </TemplateBlade>
+</Definition>

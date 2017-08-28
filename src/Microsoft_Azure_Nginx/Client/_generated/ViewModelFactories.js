@@ -24,6 +24,10 @@ define(["require", "exports"], function (require, exports) {
                 var _this = this;
                 return this.loadViewModelAsync("Project/QuickStart/ViewModels/ProjectQuickStartPartViewModel", function (providerModule) { return new providerModule.ProjectQuickStartPartViewModel(container, initialState, _this.dataContext); }, require);
             };
+            ProjectViewModelFactoriesBase.prototype.SettingsBladeViewModel = function (container, initialState) {
+                var _this = this;
+                return this.loadViewModelAsync("../Project/Settings/ViewModels/SettingsBladeViewModel", function (providerModule) { return new providerModule.SettingsBladeViewModel(container, initialState, _this.dataContext); }, require);
+            };
             ProjectViewModelFactoriesBase.prototype.PropertiesBladeViewModel = function (container, initialState) {
                 var _this = this;
                 return this.loadViewModelAsync("../Project/Properties/ViewModels/PropertiesBladeViewModel", function (providerModule) { return new providerModule.PropertiesBladeViewModel(container, initialState, _this.dataContext); }, require);
@@ -120,6 +124,9 @@ define(["require", "exports"], function (require, exports) {
             };
             ViewModelFactoriesBase.prototype.Deployments$DeploymentInfoPart = function (container, initialState) {
                 return getDeployments(this).DeploymentInfoPart(container, initialState);
+            };
+            ViewModelFactoriesBase.prototype.Project$SettingsBladeViewModel = function (container, initialState) {
+                return getProject(this).SettingsBladeViewModel(container, initialState);
             };
             ViewModelFactoriesBase.prototype.Project$PropertiesBladeViewModel = function (container, initialState) {
                 return getProject(this).PropertiesBladeViewModel(container, initialState);

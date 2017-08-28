@@ -655,6 +655,15 @@ namespace Microsoft.Portal.Extensions.Microsoft_Azure_Nginx.Client {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        public static string SettingsBladeTitle {
+            get {
+                return ResourceManager.GetString("SettingsBladeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string Status {

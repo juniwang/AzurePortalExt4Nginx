@@ -327,4 +327,7 @@
   <data name="ColumnTitle_Weight" xml:space="preserve">
     <value>Weight</value>
   </data>
+  <data name="SettingsBladeTitle" xml:space="preserve">
+    <value>Settings</value>
+  </data>
 </root>

@@ -206,6 +206,7 @@
     <Content Include="Client\Deployments\Templates\DeploymentOpeningPart.html" />
     <EmbeddedResource Include="Content\Config\df.onecloud.azure-test.net.json" />
     <EmbeddedResource Include="Content\Config\portal.azure.com.json" />
+    <Content Include="Client\Project\Settings\Templates\SettingsTemplateBlade.html" />
     <Content Include="Client\Shared\PCV3Form.html" />
     <Content Include="Global.asax" />
     <TypeScriptCompile Include="Client\Program.ts">
@@ -225,6 +226,7 @@
     <PortalDefinition Include="Client\Project\Services\Service.pdl">
       <SubType>Designer</SubType>
     </PortalDefinition>
+    <PortalDefinition Include="Client\Project\Settings\Settings.pdl" />
     <None Include="web.base.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
@@ -241,6 +243,7 @@
     <TypeScriptCompile Include="Client\Project\Services\ViewModels\ServiceAssetTypeViewModel.ts" />
     <TypeScriptCompile Include="Client\Project\Services\ViewModels\ServicePartViewModel.ts" />
     <TypeScriptCompile Include="Client\Project\Services\ViewModels\ServiceBlade.ts" />
+    <TypeScriptCompile Include="Client\Project\Settings\ViewModels\SettingsBladeViewModel.ts" />
     <TypeScriptCompile Include="Client\Shared\PortalHelpers.ts" />
     <TypeScriptCompile Include="Client\Shared\PCV3Form.ts" />
     <Content Include="Client\ProjectCreate\Templates\Create.html" />

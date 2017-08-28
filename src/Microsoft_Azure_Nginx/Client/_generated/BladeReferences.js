@@ -23,6 +23,14 @@ define(["require", "exports", "Fx/Composition/Selectable"], function (require, e
             return DeploymentsBladeReference;
         }(FxSelectable2.PdlBladeReference));
         BladeDefinitions.DeploymentsBladeReference = DeploymentsBladeReference;
+        var SettingsBladeReference = (function (_super) {
+            __extends(SettingsBladeReference, _super);
+            function SettingsBladeReference(parameters, onClosed) {
+                return _super.call(this, "SettingsBlade", extensionName, createOptions(onClosed, parameters), {}) || this;
+            }
+            return SettingsBladeReference;
+        }(FxSelectable2.PdlBladeReference));
+        BladeDefinitions.SettingsBladeReference = SettingsBladeReference;
         var PropertiesBladeReference = (function (_super) {
             __extends(PropertiesBladeReference, _super);
             function PropertiesBladeReference(parameters, onClosed) {
