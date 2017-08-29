@@ -13,6 +13,7 @@ import { checkNameAvailability } from "Shared/ARMRest";
 import * as SubscriptionDropDown from "Fx/Controls/SubscriptionDropDown";
 import * as ResourceGroupDropDown from "Fx/Controls/ResourceGroupDropDown";
 import * as LocationDropDown from "Fx/Controls/LocationDropDown";
+import * as DropDown from "Fx/Controls/DropDown";
 
 import FxAzure = MsPortalFx.Azure;
 import FxVm = MsPortalFx.ViewModels;
@@ -35,6 +36,7 @@ export class CreateBladeViewModel
     private readonly _initialLocation = ko.observable<string>();
 
     private _nameTextBox: Forms.TextBox.ViewModel;
+    private _nginxVersionDropDown: DropDown.Contract<string>;
     private _subscriptionsDropDown: SubscriptionDropDown.Contract;
     private _resourceGroupDropDown: ResourceGroupDropDown.Contract;
     private _locationsDropDown: LocationDropDown.Contract;
@@ -48,6 +50,7 @@ export class CreateBladeViewModel
                 this._initialLocation(config.galleryCreateOptions.resourceGroupLocation);
                 const model: CreateModel = {
                     name: ko.observable<string>(),
+                    nginxVersion: ko.observable<string>(),
                     subscription: ko.observable<SubscriptionDropDown.Subscription>({
                         authorizationSource: null,
                         displayName: config.galleryCreateOptions.subscriptionId,
@@ -72,9 +75,13 @@ export class CreateBladeViewModel
                         longitude: null,
                     }),
                 };
+                console.log("incoming");
+                console.log(model);
                 return model;
             },
             _ => outgoing => {
+                console.log("outgoing");
+                console.log(outgoing);
                 return outgoing;
             },
             new FxVm.ActionBars.CreateActionBar.ViewModel(container, { hideActionBar: false }));
@@ -109,7 +116,7 @@ export class CreateBladeViewModel
                     new FxVm.RequiredValidation(Strings.projectNameRequired),
                     new FxVm.LengthRangeValidation(5, 60),
                     new FxVm.RegExMatchValidation("^[a-zA-Z0-9]+-*[a-zA-Z0-9]+$", Strings.projectNameAlphaNumeric),
-                    new FxVm.CustomValidation("NAME VALIDATION BROKEN", name => this._isProjectNameAvailable(name)),
+                    //new FxVm.CustomValidation("NAME VALIDATION BROKEN", name => this._isProjectNameAvailable(name)),
                 ]),
             });
 
@@ -186,12 +193,28 @@ export class CreateBladeViewModel
             resourceTypes: [Constants.projectResourceType],
         });
 
+        this._nginxVersionDropDown = DropDown.create<string>(container,
+            <DropDown.Options<string>>{
+                label: "Nginx Version",
+                items: ko.observableArray([
+                    { text: "1.13.4", value: "1.13.4" },
+                    { text: "1.12.1", value: "1.12.1" },
+                    { text: "1.10.3", value: "1.10.3" },
+                    { text: "1.8.1", value: "1.8.1" },
+                ]),
+                validations: ko.observableArray([
+                    new FxVm.RequiredValidation("Must choose a Nginx version"),
+                ]),
+                value: this.createEditScopeAccessor(d => d.nginxVersion).getEditableObservable(container),
+            });
+
         this.formElements([
             this._nameTextBox,
             // Also add the selector fields for the pickers.
             this._subscriptionsDropDown as Magic,
             this._resourceGroupDropDown,
             this._locationsDropDown,
+            this._nginxVersionDropDown,
         ]);
     }
 
@@ -207,10 +230,12 @@ export class CreateBladeViewModel
         const subscriptionId = data.subscription().subscriptionId;
         const resourceGroupName = this._resourceGroupDropDown.value().value.name;
         const location = data.location().name;
+        const nginxVersion = data.nginxVersion();
 
         const parameters: StringMap<string> = {
-            projectName: name,
+            name: name,
             location: location,
+            nginxVersion: nginxVersion,
         };
 
         // Fill out the template deployment options.
@@ -232,72 +257,27 @@ export class CreateBladeViewModel
             $schema: "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
             contentVersion: "1.0.0.0",
             parameters: {
-                projectName: {
+                name: {
                     type: "string"
                 },
                 location: {
                     type: "string"
-                }
-            },
-            variables: {
-                registryName: "[concat('acr', uniqueString(parameters('projectName'), resourceGroup().id))]",
-                storageAccountName: "[concat('acrstorage', uniqueString(parameters('projectName'), resourceGroup().id))]"
+                },
+                nginxVersion: {
+                    type: "string"
+                },
             },
             resources: [
                 {
-                    type: "Microsoft.Storage/storageAccounts",
-                    name: "[variables('storageAccountName')]",
-                    apiVersion: "2016-01-01",
-                    location: "[parameters('location')]",
-                    tags: {
-                        displayName: "[concat('Container registry storage for ', parameters('projectName'))]",
-                        "container.registry": "[variables('registryName')]",
-                        project: "[parameters('projectName')]"
-                    },
-                    sku: {
-                        name: "Standard_LRS"
-                    },
-                    kind: "Storage"
-                },
-                {
-                    type: "Microsoft.ContainerRegistry/registries",
-                    name: "[variables('registryName')]",
-                    apiVersion: "2017-03-01",
-                    location: "[parameters('location')]",
-                    sku: {
-                        name: "Basic"
-                    },
-                    dependsOn: [
-                        "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
-                    ],
-                    tags: {
-                        displayName: "[concat('Container registry for ', parameters('projectName'))]",
-                        "container.registry": "[variables('registryName')]",
-                        project: "[parameters('projectName')]"
-                    },
-                    properties: {
-                        adminUserEnabled: true,
-                        storageAccount: {
-                            accessKey: "[listKeys(variables('storageAccountName'), '2016-01-01').keys[0].value]",
-                            name: "[variables('storageAccountName')]"
-                        }
-                    }
-                },
-                {
                     type: "Microsoft.Nginx/nginx",
-                    name: "[parameters('projectName')]",
+                    name: "[parameters('name')]",
                     apiVersion: "2014-04-01-preview",
                     location: "[parameters('location')]",
                     properties: {
-                        containerRegistryId: "[resourceId('Microsoft.ContainerRegistry/registries', variables('registryName'))]",
-                        containerRegistryUrl: "[reference(variables('registryName'), '2017-03-01').loginServer]",
-                        containerRegistryLocation: "[parameters('location')]",
-                        containerRegistryUsername: "[listCredentials(variables('registryName'), '2017-03-01').username]",
-                        containerRegistryPassword: "[listCredentials(variables('registryName'), '2017-03-01').passwords[0].value]"
+                        nginxVersion: "[parameters('nginxVersion')]",
                     },
-                    sku: {
-                        name: "Basic",
-                        tier: "Basic"
+                    tags: {
+                        "CreatedBy": "Junbo"
                     }
                 }
             ]

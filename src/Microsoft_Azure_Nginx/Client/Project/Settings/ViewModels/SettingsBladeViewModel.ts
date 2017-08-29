@@ -30,7 +30,7 @@ export class SettingsBladeViewModel extends MsPortalFx.ViewModels.Blade implemen
         // initialize the toolbar
         var button = new Toolbars.OpenLinkButton("http://azure.com");
         button.label("azure.com");
-        button.icon(MsPortalFx.Base.Images.Hyperlink());
+        button.icon(MsPortalFx.Base.Images.AzurePortal());
         this.commandBar = new Toolbars.Toolbar(container);
         this.commandBar.setItems([button]);
     }

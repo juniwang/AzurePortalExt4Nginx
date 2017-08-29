@@ -28,10 +28,24 @@ export class PropertiesPartViewModel extends MsPortalFx.ViewModels.Parts.Propert
     }
 
     private populateProperties(lifetime: PartContainer) {
-        this.setProperties([
-            new MsFxProperties.TextProperty(Strings.projectNameColumn, this._binder.binding(p => p.name(), Strings.loadingText)),
-            new MsFxProperties.TextProperty(Strings.projectLocationColumn, this._binder.binding(p => p.location(), Strings.loadingText)),
-            new MsFxProperties.CopyFieldProperty(lifetime, Strings.subscriptionId, this._binder.binding(p => MsPortalFx.ViewModels.Services.ResourceTypes.parseResourceDescriptor(p.id()).subscription, Strings.loadingText)),
-        ]);
+        // Text Property
+        var p1 = new MsFxProperties.TextProperty(Strings.projectNameColumn, this._binder.binding(p => p.name(), Strings.loadingText));
+        var p2 = new MsFxProperties.TextProperty(Strings.projectLocationColumn, this._binder.binding(p => p.location(), Strings.loadingText))
+
+        // CopyFieldProperty
+        var p3 = new MsFxProperties.CopyFieldProperty(lifetime, Strings.subscriptionId, this._binder.binding(p => MsPortalFx.ViewModels.Services.ResourceTypes.parseResourceDescriptor(p.id()).subscription, Strings.loadingText));
+
+        // Link Property
+        var p4 = new MsFxProperties.LinkProperty("Host", "http://portal.azure.com");
+
+        // open blade property
+        var p5 = new MsFxProperties.OpenBladeProperty("FirstBlade", "FirstBlade", { detailBlade: ExtensionDefinition.BladeNames.projectQuickStartBlade, detailBladeInputs: {} });
+
+        // callback
+        var p6 = new MsFxProperties.CallbackProperty("Callback", "Callback", () => {
+            console.log("callback called");
+        });
+
+        this.setProperties([p1, p2, p3, p4, p5, p6]);
     }
 }

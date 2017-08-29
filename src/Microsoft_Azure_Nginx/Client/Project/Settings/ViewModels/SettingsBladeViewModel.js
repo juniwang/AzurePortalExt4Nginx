@@ -20,7 +20,7 @@ define(["require", "exports", "ProjectStrings"], function (require, exports, Str
             });
             var button = new Toolbars.OpenLinkButton("http://azure.com");
             button.label("azure.com");
-            button.icon(MsPortalFx.Base.Images.Hyperlink());
+            button.icon(MsPortalFx.Base.Images.AzurePortal());
             _this.commandBar = new Toolbars.Toolbar(container);
             _this.commandBar.setItems([button]);
             return _this;
