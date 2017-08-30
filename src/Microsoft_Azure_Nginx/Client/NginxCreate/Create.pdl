@@ -2,7 +2,7 @@
 <Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl"
             xmlns:azurefx="http://schemas.microsoft.com/aux/2013/pdl/azurefx"
             ModulePath="./ViewModels"
-            Area="ProjectCreate">
+            Area="NginxCreate">
   <TemplateBlade Name="CreateBlade" Export="True"
          ViewModel="CreateBladeViewModel"
          Style="Create"

@@ -1,6 +1,6 @@
 ﻿{
   "$schema": "https://gallery.azure.com/schemas/2014-09-01/manifest.json#",
-  "name": "ProjectGalleryPackage",
+  "name": "NginxGalleryPackage",
   "publisher": "Microsoft",
   "version": "1.0.1-preview",
   "displayName": "ms-resource:displayName",

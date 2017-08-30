@@ -7,7 +7,7 @@ import LogHelper = require("Shared/InitializeExtension");
 import * as ExtensionDefinition from "_generated/ExtensionDefinition";
 import * as ViewModelFactories from "_generated/ViewModelFactories";
 import * as ProjectArea from "Project/ProjectArea";
-import * as ProjectCreateArea from "ProjectCreate/ProjectCreateArea";
+import * as NginxCreateArea from "NginxCreate/NginxCreateArea";
 
 /**
  * This class provides the entry point for your extension.
@@ -29,9 +29,9 @@ export class EntryPoint extends MsPortalFx.Extension.EntryPointBase<ViewModelFac
             "./Project/ProjectArea",
             (contextModule: typeof ProjectArea) => new contextModule.DataContext());
 
-        this.viewModelFactories.ProjectCreate().setDataContextFactory<typeof ProjectCreateArea>(
-            "./ProjectCreate/ProjectCreateArea",
-            (contextModule: typeof ProjectCreateArea) => new contextModule.DataContext());
+        this.viewModelFactories.NginxCreate().setDataContextFactory<typeof NginxCreateArea>(
+            "./NginxCreate/NginxCreateArea",
+            (contextModule: typeof NginxCreateArea) => new contextModule.DataContext());
 
         LogHelper.debug("Extension initialized");
         LogHelper.telemetry("ExtensionInitialized");

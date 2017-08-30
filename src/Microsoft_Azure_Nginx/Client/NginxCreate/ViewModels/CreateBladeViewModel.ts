@@ -4,7 +4,7 @@
 
 import { Container } from "Fx/Composition/Pdl/Blade";
 import * as Constants from "Constants";
-import * as ProjectCreateArea from "ProjectCreate/ProjectCreateArea";
+import * as NginxCreateArea from "NginxCreate/NginxCreateArea";
 import * as Strings from "ProjectStrings";
 import * as ExtensionDefinition from "_generated/ExtensionDefinition";
 import { Content } from "_generated/Svg";
@@ -17,13 +17,13 @@ import * as DropDown from "Fx/Controls/DropDown";
 
 import FxAzure = MsPortalFx.Azure;
 import FxVm = MsPortalFx.ViewModels;
-import Def = ExtensionDefinition.ViewModels.ProjectCreate.CreateBladeViewModel;
+import Def = ExtensionDefinition.ViewModels.NginxCreate.CreateBladeViewModel;
 import Arm = FxAzure.ResourceManager;
 import Forms = FxVm.Forms;
 
-import CreateModel = ProjectCreate.DataModels.Create;
+import CreateModel = NginxCreate.DataModels.Create;
 
-const log = Logger("CreateProjectBlade");
+const log = Logger("CreateNginxBlade");
 
 export class CreateBladeViewModel
     extends SymmetricForm<CreateModel, Untyped>
@@ -41,7 +41,7 @@ export class CreateBladeViewModel
     private _resourceGroupDropDown: ResourceGroupDropDown.Contract;
     private _locationsDropDown: LocationDropDown.Contract;
 
-    constructor(container: Container, initialState: Untyped, dataContext: ProjectCreateArea.DataContext) {
+    constructor(container: Container, initialState: Untyped, dataContext: NginxCreateArea.DataContext) {
         super(container,
             _ => (incoming) => {
                 const config = this.armProvisioner.armProvisioningConfig;
@@ -66,7 +66,7 @@ export class CreateBladeViewModel
                             location: config.galleryCreateOptions.resourceGroupLocation,
                             provisioningState: null,
                         },
-                        mode: (config.galleryCreateOptions.resourceGroupName ? 1 : 0) as ProjectCreate.DataModels.ResourceGroupMode, // TODO: WTF???
+                        mode: (config.galleryCreateOptions.resourceGroupName ? 1 : 0) as NginxCreate.DataModels.ResourceGroupMode, // TODO: WTF???
                     }),
                     location: ko.observable<FxAzure.Location>({
                         name: config.galleryCreateOptions.resourceGroupLocation,

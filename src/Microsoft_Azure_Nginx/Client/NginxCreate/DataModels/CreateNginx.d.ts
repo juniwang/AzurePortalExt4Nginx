@@ -4,7 +4,7 @@
 
 import Azure = MsPortalFx.Azure;
 
-declare module ProjectCreate.DataModels {
+declare module NginxCreate.DataModels {
     interface Create {
         name: KnockoutObservable<string>;
         nginxVersion: KnockoutObservable<string>;

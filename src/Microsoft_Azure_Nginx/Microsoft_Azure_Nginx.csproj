@@ -187,7 +187,7 @@
       <SubType>Designer</SubType>
     </PortalDefinition>
     <TypeScriptCompile Include="Client\DataModels\TypeMetadata.ts" />
-    <TypeScriptCompile Include="Client\ProjectCreate\ProjectCreateArea.ts" />
+    <TypeScriptCompile Include="Client\NginxCreate\NginxCreateArea.ts" />
     <TypeScriptCompile Include="Client\Project\Browse\ViewModels\ProjectAssetTypeViewModel.ts" />
     <TypeScriptCompile Include="Client\Project\Browse\ViewModels\ProjectPartViewModel.ts" />
     <TypeScriptCompile Include="Client\DataModels\Azure.d.ts" />
@@ -246,10 +246,10 @@
     <TypeScriptCompile Include="Client\Project\Settings\ViewModels\SettingsBladeViewModel.ts" />
     <TypeScriptCompile Include="Client\Shared\PortalHelpers.ts" />
     <TypeScriptCompile Include="Client\Shared\PCV3Form.ts" />
-    <Content Include="Client\ProjectCreate\Templates\Create.html" />
+    <Content Include="Client\NginxCreate\Templates\Create.html" />
     <PortalDefinition Include="Client\Project\Properties\Properties.pdl" />
-    <TypeScriptCompile Include="Client\ProjectCreate\DataModels\CreateProject.d.ts" />
-    <TypeScriptCompile Include="Client\ProjectCreate\ViewModels\CreateBladeViewModel.ts" />
+    <TypeScriptCompile Include="Client\NginxCreate\DataModels\CreateNginx.d.ts" />
+    <TypeScriptCompile Include="Client\NginxCreate\ViewModels\CreateBladeViewModel.ts" />
     <TypeScriptCompile Include="Client\Constants.ts" />
     <TypeScriptCompile Include="Client\Project\DataModels\Project.d.ts" />
     <TypeScriptCompile Include="Client\Project\ProjectApi.ts" />
@@ -262,7 +262,7 @@
     <TypeScriptCompile Include="Client\Project\QuickStart\ViewModels\ProjectQuickStartBladeViewModel.ts" />
     <TypeScriptCompile Include="Client\Project\QuickStart\ViewModels\ProjectQuickStartInfoListViewModel.ts" />
     <TypeScriptCompile Include="Client\Project\QuickStart\ViewModels\ProjectQuickStartPartViewModel.ts" />
-    <PortalDefinition Include="Client\ProjectCreate\Create.pdl">
+    <PortalDefinition Include="Client\NginxCreate\Create.pdl">
       <SubType>Designer</SubType>
     </PortalDefinition>
     <TypeScriptCompile Include="Client\Project\Summary\ViewModels\ProjectBlade.ts" />
