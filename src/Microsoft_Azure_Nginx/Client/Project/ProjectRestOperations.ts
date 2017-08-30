@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // --------------------------------------------------------------------------------------------
 
-import { Operations } from "ProjectStrings";
+import { Operations } from "NginxStrings";
 import { SingleRequestSingleResponse } from "Shared/RestOperationTracker";
 import * as ProjectApi from "Project/ProjectApi";
 

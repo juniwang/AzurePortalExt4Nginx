@@ -6,7 +6,7 @@ import * as ExtensionDefinition from "_generated/ExtensionDefinition";
 import * as BladeRefs from "_generated/BladeReferences";
 import * as Svg from "_generated/Svg";
 import * as ProjectArea from "ProjectArea";
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 
 import AssetTypesViewModels = ExtensionDefinition.ViewModels.Project;
 

@@ -5,7 +5,7 @@
 import { Container } from "Fx/Composition/Pdl/Blade";
 import * as Constants from "Constants";
 import * as NginxCreateArea from "NginxCreate/NginxCreateArea";
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import * as ExtensionDefinition from "_generated/ExtensionDefinition";
 import { Content } from "_generated/Svg";
 import { SymmetricForm } from "Shared/PCV3Form";

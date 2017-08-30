@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "ProjectStrings"], function (require, exports, Strings) {
+define(["require", "exports", "NginxStrings"], function (require, exports, Strings) {
     "use strict";
     var ProjectQuickStartPartViewModel = (function (_super) {
         __extends(ProjectQuickStartPartViewModel, _super);

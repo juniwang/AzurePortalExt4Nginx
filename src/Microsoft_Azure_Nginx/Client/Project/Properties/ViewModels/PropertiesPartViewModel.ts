@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------------------------
 
 import * as ProjectArea from "ProjectArea";
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import * as ExtensionDefinition from "../../../_generated/ExtensionDefinition";
 
 import Def = ExtensionDefinition.ViewModels.Project.PropertiesPartViewModel;

@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "ProjectStrings", "Shared/RestOperationTracker", "Project/ProjectApi"], function (require, exports, ProjectStrings_1, RestOperationTracker_1, ProjectApi) {
+define(["require", "exports", "NginxStrings", "Shared/RestOperationTracker", "Project/ProjectApi"], function (require, exports, NginxStrings_1, RestOperationTracker_1, ProjectApi) {
     "use strict";
     var DeleteProject = (function (_super) {
         __extends(DeleteProject, _super);
@@ -12,7 +12,7 @@ define(["require", "exports", "ProjectStrings", "Shared/RestOperationTracker", "
         }
         DeleteProject.prototype.nameof = function () { return "DeleteProject"; };
         DeleteProject.prototype.getStrings = function () {
-            return ProjectStrings_1.Operations.Delete;
+            return NginxStrings_1.Operations.Delete;
         };
         DeleteProject.prototype.makeRequest = function (input) {
             return ProjectApi.deleteProject(this.id);

@@ -7,10 +7,10 @@
               ViewModel="{ViewModel Name=ServiceAssetTypeViewModel, Module=Project/Services/ViewModels/ServiceAssetTypeViewModel}"
               BladeName="ServiceBlade"
               PartName="ServicePart"
-              PluralDisplayName="{Resource AssetTypeNames.Service.plural, Module=ProjectStrings}"
-              SingularDisplayName="{Resource AssetTypeNames.Service.singular, Module=ProjectStrings}"
-              LowerPluralDisplayName="{Resource AssetTypeNames.Service.lowerPlural, Module=ProjectStrings}"
-              LowerSingularDisplayName="{Resource AssetTypeNames.Service.lowerSingular, Module=ProjectStrings}"
+              PluralDisplayName="{Resource AssetTypeNames.Service.plural, Module=NginxStrings}"
+              SingularDisplayName="{Resource AssetTypeNames.Service.singular, Module=NginxStrings}"
+              LowerPluralDisplayName="{Resource AssetTypeNames.Service.lowerPlural, Module=NginxStrings}"
+              LowerSingularDisplayName="{Resource AssetTypeNames.Service.lowerSingular, Module=NginxStrings}"
               Icon="{Resource Content.SVG.service, Module=_generated/Svg}">
     <!-- TODO: Permissions from RBAC? -->
   </AssetType>

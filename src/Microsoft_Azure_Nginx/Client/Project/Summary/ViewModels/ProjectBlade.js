@@ -4,7 +4,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "Fx/Composition/TemplateBlade", "Fx/Controls/Essentials", "Fx/Controls/Toolbar/MoveResourceToolbarButton", "ProjectStrings", "_generated/ExtensionDefinition", "_generated/BladeReferences", "../../../_generated/HubsExtension/BladeReferences", "_generated/Svg", "Project/ViewModels/ProjectCommands"], function (require, exports, TemplateBlade, Essentials_1, MoveButton, Strings, ExtensionDefinition_1, BladeRefs, HubsBladeRefs, Svg_1, ProjectCommands_1) {
+define(["require", "exports", "Fx/Composition/TemplateBlade", "Fx/Controls/Essentials", "Fx/Controls/Toolbar/MoveResourceToolbarButton", "NginxStrings", "_generated/ExtensionDefinition", "_generated/BladeReferences", "../../../_generated/HubsExtension/BladeReferences", "_generated/Svg", "Project/ViewModels/ProjectCommands"], function (require, exports, TemplateBlade, Essentials_1, MoveButton, Strings, ExtensionDefinition_1, BladeRefs, HubsBladeRefs, Svg_1, ProjectCommands_1) {
     "use strict";
     var ViewModels = MsPortalFx.ViewModels;
     var Toolbars = ViewModels.Toolbars;

@@ -7,7 +7,7 @@
 /// <reference path="../TypeReferences.d.ts" />
 
 import Svg = require ("_generated/Svg");
-import ProjectStrings = require ("ProjectStrings");
+import NginxStrings = require ("NginxStrings");
 import EntryPointModule = require ("Program");
 export = ExtensionDefinition;
 module ExtensionDefinition {

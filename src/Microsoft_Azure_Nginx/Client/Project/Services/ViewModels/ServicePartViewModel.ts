@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // --------------------------------------------------------------------------------------------
 
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import { DataContext } from "ProjectArea";
 import { Content } from "_generated/Svg";
 

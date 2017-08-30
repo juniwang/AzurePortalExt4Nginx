@@ -9,10 +9,10 @@
               BladeName="ProjectBlade"
               UseResourceMenu="True"
               UseStaticResourceMenuOverview="True"
-              PluralDisplayName="{Resource AssetTypeNames.Project.plural, Module=ProjectStrings}"
-              SingularDisplayName="{Resource AssetTypeNames.Project.singular, Module=ProjectStrings}"
-              LowerPluralDisplayName="{Resource AssetTypeNames.Project.lowerPlural, Module=ProjectStrings}"
-              LowerSingularDisplayName="{Resource AssetTypeNames.Project.lowerSingular, Module=ProjectStrings}"
+              PluralDisplayName="{Resource AssetTypeNames.Project.plural, Module=NginxStrings}"
+              SingularDisplayName="{Resource AssetTypeNames.Project.singular, Module=NginxStrings}"
+              LowerPluralDisplayName="{Resource AssetTypeNames.Project.lowerPlural, Module=NginxStrings}"
+              LowerSingularDisplayName="{Resource AssetTypeNames.Project.lowerSingular, Module=NginxStrings}"
               Icon="{Resource Content.SVG.project, Module=_generated/Svg}">
     <Browse Type="ResourceType" Private="true" />
     <ResourceType ResourceTypeName="Microsoft.Nginx/Nginx" ApiVersion="2014-04-01-preview" />

@@ -6,7 +6,7 @@ import * as TemplateBlade from "Fx/Composition/TemplateBlade";
 import { DefaultOptions, ViewModel as EssentialsVM } from "Fx/Controls/Essentials";
 import * as MoveButton from "Fx/Controls/Toolbar/MoveResourceToolbarButton";
 
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import { BladeNames, AssetTypes } from "_generated/ExtensionDefinition";
 import * as BladeRefs from "_generated/BladeReferences";
 import * as HubsBladeRefs from "../../../_generated/HubsExtension/BladeReferences"

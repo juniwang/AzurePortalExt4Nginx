@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // --------------------------------------------------------------------------------------------
 
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import * as ProjectArea from "Project/ProjectArea";
 
 export class ProjectQuickStartBladeViewModel extends MsPortalFx.ViewModels.Blade {

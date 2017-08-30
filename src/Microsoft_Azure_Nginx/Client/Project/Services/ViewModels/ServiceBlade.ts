@@ -6,7 +6,7 @@ import * as TemplateBlade from "Fx/Composition/TemplateBlade";
 import { NonResourceOptions, ViewModel as EssentialsVM } from "Fx/Controls/Essentials";
 import * as MoveButton from "Fx/Controls/Toolbar/MoveResourceToolbarButton";
 
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import { Binder } from "Shared/Binder";
 import { BladeNames, AssetTypes } from "_generated/ExtensionDefinition";
 import { Content } from "_generated/Svg";

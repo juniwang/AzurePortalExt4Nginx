@@ -227,6 +227,7 @@
       <SubType>Designer</SubType>
     </PortalDefinition>
     <PortalDefinition Include="Client\Project\Settings\Settings.pdl" />
+    <Content Include="App_Data\Gallery\Microsoft.NginxGalleryPackage.1.0.1-preview.azpkg" />
     <None Include="web.base.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
@@ -296,9 +297,6 @@
     <None Include="GalleryPackages\Create\Icons\Wide.png" />
     <None Include="GalleryPackages\Create\Screenshots\Image01.png" />
     <None Include="GalleryPackages\Create\strings\resources.resjson" />
-    <Content Include="App_Data\Gallery\Microsoft.ProjectGalleryPackage.1.0.1-preview.azpkg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <TypeScriptCompile Include="Definitions\Fx.d.ts" />
     <TypeScriptCompile Include="Definitions\FxEnvironment.d.ts" />
     <TypeScriptCompile Include="Definitions\FxEnvironmentExtensions.d.ts" />
@@ -324,8 +322,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Client\ProjectStrings.Designer.cs">
-      <DependentUpon>ProjectStrings.resx</DependentUpon>
+    <Compile Include="Client\NginxStrings.Designer.cs">
+      <DependentUpon>NginxStrings.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -345,9 +343,9 @@
       <SubType>Designer</SubType>
       <GenerateLCG>true</GenerateLCG>
     </EmbeddedResource>
-    <EmbeddedResource Include="Client\ProjectStrings.resx">
+    <EmbeddedResource Include="Client\NginxStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ProjectStrings.Designer.cs</LastGenOutput>
+      <LastGenOutput>NginxStrings.Designer.cs</LastGenOutput>
       <BundleId>MindaroExtension</BundleId>
       <SubType>Designer</SubType>
       <GenerateLCG>true</GenerateLCG>

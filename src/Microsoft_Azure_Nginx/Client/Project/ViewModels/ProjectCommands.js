@@ -1,4 +1,4 @@
-define(["require", "exports", "ProjectStrings", "Project/ProjectRestOperations"], function (require, exports, Strings, ProjectRestOperations_1) {
+define(["require", "exports", "NginxStrings", "Project/ProjectRestOperations"], function (require, exports, Strings, ProjectRestOperations_1) {
     "use strict";
     var FxViewModels = MsPortalFx.ViewModels;
     var Dialogs = FxViewModels.Dialogs;

@@ -2,7 +2,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // --------------------------------------------------------------------------------------------
 
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import { DeleteProject } from "Project/ProjectRestOperations";
 
 import FxViewModels = MsPortalFx.ViewModels;

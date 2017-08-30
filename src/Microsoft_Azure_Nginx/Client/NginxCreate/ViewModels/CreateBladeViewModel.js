@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "Constants", "ProjectStrings", "_generated/Svg", "Shared/PCV3Form", "Shared/ARMRest", "Fx/Controls/SubscriptionDropDown", "Fx/Controls/ResourceGroupDropDown", "Fx/Controls/LocationDropDown", "Fx/Controls/DropDown"], function (require, exports, Constants, Strings, Svg_1, PCV3Form_1, ARMRest_1, SubscriptionDropDown, ResourceGroupDropDown, LocationDropDown, DropDown) {
+define(["require", "exports", "Constants", "NginxStrings", "_generated/Svg", "Shared/PCV3Form", "Shared/ARMRest", "Fx/Controls/SubscriptionDropDown", "Fx/Controls/ResourceGroupDropDown", "Fx/Controls/LocationDropDown", "Fx/Controls/DropDown"], function (require, exports, Constants, Strings, Svg_1, PCV3Form_1, ARMRest_1, SubscriptionDropDown, ResourceGroupDropDown, LocationDropDown, DropDown) {
     "use strict";
     var FxAzure = MsPortalFx.Azure;
     var FxVm = MsPortalFx.ViewModels;

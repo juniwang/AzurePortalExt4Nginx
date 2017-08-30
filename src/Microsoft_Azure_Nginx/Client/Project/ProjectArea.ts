@@ -5,7 +5,7 @@
 import * as Constants from "Constants";
 import * as Globalization from "MsPortalFx/Globalization";
 import * as Network from "Shared/Network";
-import * as Strings from "ProjectStrings";
+import * as Strings from "NginxStrings";
 import { ProjectMetadata } from "DataModels/TypeMetadata";
 import { definitionName as extensionName, AssetTypeNames } from "_generated/ExtensionDefinition";
 import { EntityCache, QueryCache, getData } from "Shared/Caches";

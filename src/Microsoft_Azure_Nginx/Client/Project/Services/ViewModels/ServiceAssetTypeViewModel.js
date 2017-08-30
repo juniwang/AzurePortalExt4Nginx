@@ -1,4 +1,4 @@
-define(["require", "exports", "_generated/BladeReferences", "_generated/Svg", "ProjectStrings"], function (require, exports, BladeRefs, Svg, Strings) {
+define(["require", "exports", "_generated/BladeReferences", "_generated/Svg", "NginxStrings"], function (require, exports, BladeRefs, Svg, Strings) {
     "use strict";
     var ServiceAssetTypeViewModel = (function () {
         function ServiceAssetTypeViewModel(container, initialState, dataContext) {

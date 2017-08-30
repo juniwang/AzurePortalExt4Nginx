@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-define(["require", "exports", "ProjectStrings", "_generated/Svg"], function (require, exports, Strings, Svg_1) {
+define(["require", "exports", "NginxStrings", "_generated/Svg"], function (require, exports, Strings, Svg_1) {
     "use strict";
     var FxViewModels = MsPortalFx.ViewModels;
     var ServicePartViewModel = (function (_super) {

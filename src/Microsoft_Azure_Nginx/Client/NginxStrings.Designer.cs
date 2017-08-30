@@ -22,14 +22,14 @@ namespace Microsoft.Portal.Extensions.Microsoft_Azure_Nginx.Client {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ProjectStrings {
+    public class NginxStrings {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ProjectStrings() {
+        internal NginxStrings() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Microsoft.Portal.Extensions.Microsoft_Azure_Nginx.Client {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.Portal.Extensions.Microsoft_Azure_Nginx.Client.ProjectStrings", typeof(ProjectStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.Portal.Extensions.Microsoft_Azure_Nginx.Client.NginxStrings", typeof(NginxStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -7,7 +7,7 @@
 /// <reference path="../TypeReferences.d.ts" />
 
 import Svg = require ("_generated/Svg");
-import ProjectStrings = require ("ProjectStrings");
+import NginxStrings = require ("NginxStrings");
 import EntryPointModule = require ("Program");
 export = ExtensionDefinition;
 module ExtensionDefinition {
@@ -21,10 +21,10 @@ module ExtensionDefinition {
   "assetTypes": [
     {
       "name": "Project",
-      "singularDisplayName": ProjectStrings.AssetTypeNames.Project.singular,
-      "pluralDisplayName": ProjectStrings.AssetTypeNames.Project.plural,
-      "lowerSingularDisplayName": ProjectStrings.AssetTypeNames.Project.lowerSingular,
-      "lowerPluralDisplayName": ProjectStrings.AssetTypeNames.Project.lowerPlural,
+      "singularDisplayName": NginxStrings.AssetTypeNames.Project.singular,
+      "pluralDisplayName": NginxStrings.AssetTypeNames.Project.plural,
+      "lowerSingularDisplayName": NginxStrings.AssetTypeNames.Project.lowerSingular,
+      "lowerPluralDisplayName": NginxStrings.AssetTypeNames.Project.lowerPlural,
       "viewModel": "Project$ProjectAssetTypeViewModel",
       "contracts": 40,
       "partName": "ProjectPart",
@@ -39,10 +39,10 @@ module ExtensionDefinition {
     },
     {
       "name": "Service",
-      "singularDisplayName": ProjectStrings.AssetTypeNames.Service.singular,
-      "pluralDisplayName": ProjectStrings.AssetTypeNames.Service.plural,
-      "lowerSingularDisplayName": ProjectStrings.AssetTypeNames.Service.lowerSingular,
-      "lowerPluralDisplayName": ProjectStrings.AssetTypeNames.Service.lowerPlural,
+      "singularDisplayName": NginxStrings.AssetTypeNames.Service.singular,
+      "pluralDisplayName": NginxStrings.AssetTypeNames.Service.plural,
+      "lowerSingularDisplayName": NginxStrings.AssetTypeNames.Service.lowerSingular,
+      "lowerPluralDisplayName": NginxStrings.AssetTypeNames.Service.lowerPlural,
       "viewModel": "Project$ServiceAssetTypeViewModel",
       "contracts": 1,
       "partName": "ServicePart",
