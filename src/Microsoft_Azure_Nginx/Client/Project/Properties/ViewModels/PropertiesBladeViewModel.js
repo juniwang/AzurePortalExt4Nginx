@@ -10,12 +10,14 @@ define(["require", "exports", "ProjectStrings"], function (require, exports, Str
         function PropertiesBladeViewModel(container, initialState, dataContext) {
             var _this = _super.call(this) || this;
             _this.resourceId = ko.observable();
+            _this.resource = ko.observable();
             _this.title(Strings.propertiesBladeTitle);
             _this.icon(MsPortalFx.Base.Images.Polychromatic.Info());
             return _this;
         }
         PropertiesBladeViewModel.prototype.onInputsSet = function (inputs) {
             this.resourceId(inputs.id);
+            this.resource(inputs.resource);
             this.title(Strings.propertiesBladeTitle);
             return null;
         };

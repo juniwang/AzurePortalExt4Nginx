@@ -36,7 +36,7 @@ export class CreateBladeViewModel
     private readonly _initialLocation = ko.observable<string>();
 
     private _nameTextBox: Forms.TextBox.ViewModel;
-    private _nginxVersionDropDown: DropDown.Contract<string>;
+    private _nginxVersionDropDown: DropDown.ViewModel<string>;
     private _subscriptionsDropDown: SubscriptionDropDown.Contract;
     private _resourceGroupDropDown: ResourceGroupDropDown.Contract;
     private _locationsDropDown: LocationDropDown.Contract;
@@ -193,9 +193,12 @@ export class CreateBladeViewModel
             resourceTypes: [Constants.projectResourceType],
         });
 
-        this._nginxVersionDropDown = DropDown.create<string>(container,
-            <DropDown.Options<string>>{
-                label: "Nginx Version",
+        this._nginxVersionDropDown = new DropDown.ViewModel(
+            container,
+            this,
+            this.createEditScopeAccessor<string>(p => p.nginxVersion),
+            {
+                label: ko.observable("Nginx Version"),
                 items: ko.observableArray([
                     { text: "1.13.4", value: "1.13.4" },
                     { text: "1.12.1", value: "1.12.1" },
@@ -205,7 +208,6 @@ export class CreateBladeViewModel
                 validations: ko.observableArray([
                     new FxVm.RequiredValidation("Must choose a Nginx version"),
                 ]),
-                value: this.createEditScopeAccessor(d => d.nginxVersion).getEditableObservable(container),
             });
 
         this.formElements([

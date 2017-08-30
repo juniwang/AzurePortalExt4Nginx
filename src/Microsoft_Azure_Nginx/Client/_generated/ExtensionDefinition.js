@@ -165,7 +165,7 @@ define(["require", "exports"], function (require, exports) {
         (function (BladeNames) {
             BladeNames.deploymentsBlade = "DeploymentsBlade";
             BladeNames.settingsBlade = "SettingsBlade";
-            BladeNames.propertiesBlade = "PropertiesBlade";
+            BladeNames.nginxPropertiesBlade = "NginxPropertiesBlade";
             BladeNames.projectQuickStartBlade = "ProjectQuickStartBlade";
             BladeNames.createBlade = "CreateBlade";
             BladeNames.serviceBlade = "ServiceBlade";

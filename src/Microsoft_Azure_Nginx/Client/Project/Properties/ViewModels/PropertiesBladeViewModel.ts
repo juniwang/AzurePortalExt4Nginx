@@ -10,6 +10,7 @@ import Def = ExtensionDefinition.ViewModels.Project.PropertiesBladeViewModel;
 
 export class PropertiesBladeViewModel extends MsPortalFx.ViewModels.Blade implements Def.Contract {
     public resourceId: KnockoutObservable<string> = ko.observable<string>();
+    public resource = ko.observable<HubsExtension.Azure.ResourceBase>();
 
     constructor(container: MsPortalFx.ViewModels.ContainerContract, initialState: Untyped, dataContext: ProjectArea.DataContext) {
         super();
@@ -19,6 +20,7 @@ export class PropertiesBladeViewModel extends MsPortalFx.ViewModels.Blade implem
 
     public onInputsSet(inputs: Def.InputsContract): Promise {
         this.resourceId(inputs.id);
+        this.resource(inputs.resource);
         this.title(Strings.propertiesBladeTitle);
         return null;
     }

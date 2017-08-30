@@ -30,7 +30,7 @@ module ExtensionDefinition {
       "name": "SettingsBlade"
     },
     {
-      "name": "PropertiesBlade",
+      "name": "NginxPropertiesBlade",
       "width": 0
     },
     {

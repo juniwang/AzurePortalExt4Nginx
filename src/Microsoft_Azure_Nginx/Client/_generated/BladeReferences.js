@@ -31,14 +31,14 @@ define(["require", "exports", "Fx/Composition/Selectable"], function (require, e
             return SettingsBladeReference;
         }(FxSelectable2.PdlBladeReference));
         BladeDefinitions.SettingsBladeReference = SettingsBladeReference;
-        var PropertiesBladeReference = (function (_super) {
-            __extends(PropertiesBladeReference, _super);
-            function PropertiesBladeReference(parameters, onClosed) {
-                return _super.call(this, "PropertiesBlade", extensionName, createOptions(onClosed, parameters), {}) || this;
+        var NginxPropertiesBladeReference = (function (_super) {
+            __extends(NginxPropertiesBladeReference, _super);
+            function NginxPropertiesBladeReference(parameters, onClosed) {
+                return _super.call(this, "NginxPropertiesBlade", extensionName, createOptions(onClosed, parameters), {}) || this;
             }
-            return PropertiesBladeReference;
+            return NginxPropertiesBladeReference;
         }(FxSelectable2.PdlBladeReference));
-        BladeDefinitions.PropertiesBladeReference = PropertiesBladeReference;
+        BladeDefinitions.NginxPropertiesBladeReference = NginxPropertiesBladeReference;
         var ProjectQuickStartBladeReference = (function (_super) {
             __extends(ProjectQuickStartBladeReference, _super);
             function ProjectQuickStartBladeReference(onClosed) {

@@ -54,7 +54,10 @@ export class ProjectAssetTypeViewModel
             displayText: Strings.MenuItem.properties,
             keywords: [Strings.MenuItemKeyword.subscription, Strings.MenuItemKeyword.resourceGroup, Strings.MenuItemKeyword.location],
             icon: MsPortalFx.Base.Images.Polychromatic.Controls(),
-            supplyBladeReference: () => new BladeRefs.PropertiesBladeReference({ id: resourceInfo.resourceId }),
+            supplyBladeReference: () => new BladeRefs.NginxPropertiesBladeReference({
+                id: resourceInfo.resourceId,
+                resource: resourceInfo.resource
+            }),
         };
 
         var extensionsItem = {

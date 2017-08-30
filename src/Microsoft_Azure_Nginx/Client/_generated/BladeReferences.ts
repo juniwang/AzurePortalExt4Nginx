@@ -37,12 +37,13 @@ module BladeDefinitions {
                     });
         }
     }
-    export interface PropertiesBladeInputs {
+    export interface NginxPropertiesBladeInputs {
         id: any;
+        resource: any;
     }
-    export class PropertiesBladeReference extends FxSelectable2.PdlBladeReference<PropertiesBladeInputs, void> {
-        public constructor(parameters: PropertiesBladeInputs, onClosed?: FxComposition.BladeClosedWithDataHandler<any>) {
-            super("PropertiesBlade", extensionName, createOptions<PropertiesBladeInputs, void>(onClosed, parameters), {
+    export class NginxPropertiesBladeReference extends FxSelectable2.PdlBladeReference<NginxPropertiesBladeInputs, void> {
+        public constructor(parameters: NginxPropertiesBladeInputs, onClosed?: FxComposition.BladeClosedWithDataHandler<any>) {
+            super("NginxPropertiesBlade", extensionName, createOptions<NginxPropertiesBladeInputs, void>(onClosed, parameters), {
                     });
         }
     }

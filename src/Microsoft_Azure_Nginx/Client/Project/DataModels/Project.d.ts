@@ -41,6 +41,7 @@ declare module Project.DataModels {
     interface ListServicesResponse {
         id: string;
         name: string;
+        location: string;
         properties: NginxStatus;
     }
 

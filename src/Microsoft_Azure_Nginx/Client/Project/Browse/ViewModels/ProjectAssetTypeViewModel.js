@@ -32,7 +32,10 @@ define(["require", "exports", "_generated/BladeReferences", "_generated/Svg", "P
                 displayText: Strings.MenuItem.properties,
                 keywords: [Strings.MenuItemKeyword.subscription, Strings.MenuItemKeyword.resourceGroup, Strings.MenuItemKeyword.location],
                 icon: MsPortalFx.Base.Images.Polychromatic.Controls(),
-                supplyBladeReference: function () { return new BladeRefs.PropertiesBladeReference({ id: resourceInfo.resourceId }); },
+                supplyBladeReference: function () { return new BladeRefs.NginxPropertiesBladeReference({
+                    id: resourceInfo.resourceId,
+                    resource: resourceInfo.resource
+                }); },
             };
             var extensionsItem = {
                 id: "extensions",

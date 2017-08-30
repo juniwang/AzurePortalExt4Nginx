@@ -217,7 +217,7 @@ module ExtensionDefinition {
     export module BladeNames {
         export var deploymentsBlade: string = "DeploymentsBlade";
         export var settingsBlade: string = "SettingsBlade";
-        export var propertiesBlade: string = "PropertiesBlade";
+        export var nginxPropertiesBlade: string = "NginxPropertiesBlade";
         export var projectQuickStartBlade: string = "ProjectQuickStartBlade";
         export var createBlade: string = "CreateBlade";
         export var serviceBlade: string = "ServiceBlade";
@@ -275,6 +275,7 @@ module ExtensionDefinition {
             export module PropertiesBladeViewModel {
                 export interface InputsContract {
                     id: any;
+                    resource: any;
                 }
                 export interface SettingsContract {
                 }
@@ -285,6 +286,7 @@ module ExtensionDefinition {
             export module PropertiesPartViewModel {
                 export interface InputsContract {
                     id: any;
+                    resource: any;
                     actionBarOutput?: any;
                 }
                 export interface SettingsContract {

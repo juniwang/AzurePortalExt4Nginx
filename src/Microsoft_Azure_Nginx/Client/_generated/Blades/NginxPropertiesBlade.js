@@ -4,11 +4,15 @@ define(["require", "exports", "../../Project/Properties/ViewModels/PropertiesBla
     (function (Main) {
         "use strict";
         Main.blade = {
-            "name": "PropertiesBlade",
+            "name": "NginxPropertiesBlade",
+            "inputs": [
+                "id",
+                "resource"
+            ],
             "viewModelName": "Project$PropertiesBladeViewModel",
             "lenses": [
                 {
-                    "name": "PropertiesBlade_lens1",
+                    "name": "NginxPropertiesBlade_lens1",
                     "partInstances": [
                         {
                             "name": "PropertiesPart",
@@ -16,8 +20,30 @@ define(["require", "exports", "../../Project/Properties/ViewModels/PropertiesBla
                                 "styleSheets": [],
                                 "viewModel": "Project$PropertiesPartViewModel",
                                 "partKind": 24,
-                                "inputs": [],
-                                "bindings": [],
+                                "inputs": [
+                                    "id",
+                                    "resource"
+                                ],
+                                "bindings": [
+                                    {
+                                        "property": "id",
+                                        "valuesFrom": [
+                                            {
+                                                "referenceType": 1,
+                                                "property": "id"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "property": "resource",
+                                        "valuesFrom": [
+                                            {
+                                                "referenceType": 1,
+                                                "property": "resource"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "details": [
                                     {
                                         "invocationInputArguments": [
@@ -57,6 +83,26 @@ define(["require", "exports", "../../Project/Properties/ViewModels/PropertiesBla
                                 ],
                                 "initialSize": 8
                             }
+                        }
+                    ]
+                }
+            ],
+            "viewModelInputs": [
+                {
+                    "property": "id",
+                    "valuesFrom": [
+                        {
+                            "referenceType": 1,
+                            "property": "id"
+                        }
+                    ]
+                },
+                {
+                    "property": "resource",
+                    "valuesFrom": [
+                        {
+                            "referenceType": 1,
+                            "property": "resource"
                         }
                     ]
                 }

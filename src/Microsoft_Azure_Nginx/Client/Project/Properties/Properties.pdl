@@ -2,9 +2,21 @@
 <Definition xmlns="http://schemas.microsoft.com/aux/2013/pdl"
             xmlns:azurefx="http://schemas.microsoft.com/aux/2013/pdl/azurefx"
             Area="Project">
-  
-  <azurefx:PropertiesBlade Name="PropertiesBlade"
-                           ViewModel="{ViewModel Name=PropertiesBladeViewModel, Module=./Properties/ViewModels/PropertiesBladeViewModel}"
-                           PartViewModel="{ViewModel Name=PropertiesPartViewModel, Module=./Properties/ViewModels/PropertiesPartViewModel}"
-                           Parameter="id" />
+
+    <azurefx:PropertiesBlade Name="NginxPropertiesBlade"
+                             ViewModel="{ViewModel Name=PropertiesBladeViewModel, Module=./Properties/ViewModels/PropertiesBladeViewModel}"
+                             PartViewModel="{ViewModel Name=PropertiesPartViewModel, Module=./Properties/ViewModels/PropertiesPartViewModel}">
+        <azurefx:PropertiesBlade.BladeParameters>
+            <Parameter Name="id" Type="Supplemental"/>
+            <Parameter Name="resource" Type="Supplemental"/>
+        </azurefx:PropertiesBlade.BladeParameters>
+        <azurefx:PropertiesBlade.BladeProperties>
+            <Property Name="id" Source="{BladeParameter id}"/>
+            <Property Name="resource" Source="{BladeParameter resource}"/>
+        </azurefx:PropertiesBlade.BladeProperties>
+        <azurefx:PropertiesBlade.PartProperties>
+            <Property Name="id" Source="{BladeParameter id}"/>
+            <Property Name="resource" Source="{BladeParameter resource}"/>
+        </azurefx:PropertiesBlade.PartProperties>
+    </azurefx:PropertiesBlade>
 </Definition>

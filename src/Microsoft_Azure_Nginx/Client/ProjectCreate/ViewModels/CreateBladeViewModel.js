@@ -13,8 +13,7 @@ define(["require", "exports", "Constants", "ProjectStrings", "_generated/Svg", "
     var CreateBladeViewModel = (function (_super) {
         __extends(CreateBladeViewModel, _super);
         function CreateBladeViewModel(container, initialState, dataContext) {
-            var _this = this;
-            _super.call(this, container, function (_) { return function (incoming) {
+            var _this = _super.call(this, container, function (_) { return function (incoming) {
                 var config = _this.armProvisioner.armProvisioningConfig;
                 log.debug(incoming, config);
                 _this._initialSubscriptionId(config.galleryCreateOptions.subscriptionId);
@@ -53,19 +52,20 @@ define(["require", "exports", "Constants", "ProjectStrings", "_generated/Svg", "
                 console.log("outgoing");
                 console.log(outgoing);
                 return outgoing;
-            }; }, new FxVm.ActionBars.CreateActionBar.ViewModel(container, { hideActionBar: false }));
-            this.readonly = _subscriptionId = ko.observable();
-            this.readonly = _initialSubscriptionId = ko.observable();
-            this.readonly = _initialLocation = ko.observable();
-            this.title(Strings.AssetTypeNames.Project.singular);
-            this.subtitle(Strings.AssetTypeNames.Project.singular);
-            this.icon(Svg_1.Content.SVG.project);
-            this.armProvisioner = new Arm.Provisioner(container, initialState, {
-                supplyTemplateDeploymentOptions: this._supplyProvisioningPromise.bind(this),
-                actionBar: this.actionBar,
-                parameterProvider: this.parameterProvider
+            }; }, new FxVm.ActionBars.CreateActionBar.ViewModel(container, { hideActionBar: false })) || this;
+            _this._subscriptionId = ko.observable();
+            _this._initialSubscriptionId = ko.observable();
+            _this._initialLocation = ko.observable();
+            _this.title(Strings.AssetTypeNames.Project.singular);
+            _this.subtitle(Strings.AssetTypeNames.Project.singular);
+            _this.icon(Svg_1.Content.SVG.project);
+            _this.armProvisioner = new Arm.Provisioner(container, initialState, {
+                supplyTemplateDeploymentOptions: _this._supplyProvisioningPromise.bind(_this),
+                actionBar: _this.actionBar,
+                parameterProvider: _this.parameterProvider
             });
-            this._initializeFormFields(container, initialState);
+            _this._initializeFormFields(container, initialState);
+            return _this;
         }
         CreateBladeViewModel.prototype._initializeFormFields = function (container, initialState) {
             var _this = this;
@@ -132,8 +132,8 @@ define(["require", "exports", "Constants", "ProjectStrings", "_generated/Svg", "
                 ]),
                 resourceTypes: [Constants.projectResourceType],
             });
-            this._nginxVersionDropDown = DropDown.create(container, {
-                label: "Nginx Version",
+            this._nginxVersionDropDown = new DropDown.ViewModel(container, this, this.createEditScopeAccessor(function (p) { return p.nginxVersion; }), {
+                label: ko.observable("Nginx Version"),
                 items: ko.observableArray([
                     { text: "1.13.4", value: "1.13.4" },
                     { text: "1.12.1", value: "1.12.1" },
@@ -143,7 +143,6 @@ define(["require", "exports", "Constants", "ProjectStrings", "_generated/Svg", "
                 validations: ko.observableArray([
                     new FxVm.RequiredValidation("Must choose a Nginx version"),
                 ]),
-                value: this.createEditScopeAccessor(function (d) { return d.nginxVersion; }).getEditableObservable(container),
             });
             this.formElements([
                 this._nameTextBox,
@@ -171,7 +170,7 @@ define(["require", "exports", "Constants", "ProjectStrings", "_generated/Svg", "
             return Q({
                 subscriptionId: subscriptionId,
                 resourceGroupName: resourceGroupName,
-                resourceGroupLocation: this._resourceGroupDropDown.value().mode === ResourceGroupDropDown.Mode.CreateNew ? location : this._resourceGroupDropDown.value().value.location,
+                resourceGroupLocation: this._resourceGroupDropDown.value().mode === 1 ? location : this._resourceGroupDropDown.value().value.location,
                 parameters: parameters,
                 deploymentName: galleryCreateOptions.deploymentName,
                 resourceProviders: Constants.resourceProviderDependencies,
