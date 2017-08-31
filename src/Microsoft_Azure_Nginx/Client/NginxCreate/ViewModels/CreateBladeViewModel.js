@@ -76,6 +76,7 @@ define(["require", "exports", "Constants", "NginxStrings", "_generated/Svg", "Sh
                     new FxVm.RequiredValidation(Strings.projectNameRequired),
                     new FxVm.LengthRangeValidation(5, 60),
                     new FxVm.RegExMatchValidation("^[a-zA-Z0-9]+-*[a-zA-Z0-9]+$", Strings.projectNameAlphaNumeric),
+                    new FxVm.CustomValidation("NAME VALIDATION BROKEN", function (name) { return _this._isProjectNameAvailable(name); }),
                 ]),
             });
             this._nameTextBox.delayValidationTimeout(500);

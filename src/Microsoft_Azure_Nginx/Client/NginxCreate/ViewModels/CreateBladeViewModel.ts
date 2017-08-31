@@ -31,9 +31,9 @@ export class CreateBladeViewModel
 
     public armProvisioner: Arm.Provisioner<CreateModel>;
 
-    private readonly _subscriptionId = ko.observable<string>();
-    private readonly _initialSubscriptionId = ko.observable<string>();
-    private readonly _initialLocation = ko.observable<string>();
+    private _subscriptionId = ko.observable<string>();
+    private _initialSubscriptionId = ko.observable<string>();
+    private _initialLocation = ko.observable<string>();
 
     private _nameTextBox: Forms.TextBox.ViewModel;
     private _nginxVersionDropDown: DropDown.ViewModel<string>;
@@ -116,7 +116,7 @@ export class CreateBladeViewModel
                     new FxVm.RequiredValidation(Strings.projectNameRequired),
                     new FxVm.LengthRangeValidation(5, 60),
                     new FxVm.RegExMatchValidation("^[a-zA-Z0-9]+-*[a-zA-Z0-9]+$", Strings.projectNameAlphaNumeric),
-                    //new FxVm.CustomValidation("NAME VALIDATION BROKEN", name => this._isProjectNameAvailable(name)),
+                    new FxVm.CustomValidation("NAME VALIDATION BROKEN", name => this._isProjectNameAvailable(name)),
                 ]),
             });
 
